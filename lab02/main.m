@@ -31,6 +31,22 @@ if license('test', 'Optimization_Toolbox')
     Lc_eq = max(L_eq, [], 2);
     Lc_ch = max(L_ch, [], 2);
     Lc_op = max(L_op, [], 2);
+    
+    % Plotting
+    figure;
+    subplot(1, 2, 1);
+    plot(1:n, [Lc_eq, Lc_ch, Lc_op], "-*");
+    legend("Equally spaced nodes", "Chebychev nodes", "Optimal nodes");
+    title("Lebesgue Constant");
+    xlabel("number of nodes");
+    ylabel("Lebesgue constant");
+    
+    subplot(1, 2, 2);
+    plot(z, [L_eq(n, :); L_ch(n, :); L_op(n, :)]', "-*");
+    legend("Equally spaced nodes", "Chebychev nodes", "Optimal nodes");
+    title("Lebesgue Function");
+    xlabel("x in [-1, 1]");
+    ylabel("Lebesgue function");
 
 else
     printf('optimization-toolbox is required to run this M-script');
