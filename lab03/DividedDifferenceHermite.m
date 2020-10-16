@@ -1,6 +1,5 @@
 function [d] = DividedDifferenceHermite(x, fx, dfx)
     
-    x = reshape([x;x], 1, [])';
     fx = reshape([fx;fx], 1, [])';
     n = length(x);
     
