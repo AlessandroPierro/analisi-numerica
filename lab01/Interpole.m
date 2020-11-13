@@ -3,7 +3,7 @@ function [P] = Interpole(f, x, z)
     n = length(x);
     m = length(z);
     
-    L = Lagrange(x, z);
+    L = LagrangePol(x, z);
     P = zeros(m);
     
     [X, Y] = meshgrid(x, x);

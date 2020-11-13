@@ -10,14 +10,14 @@ I_Gauss = zeros(1, n);
 I_Simpson = zeros(1, n);
 
 for i = 1:10
-    I_Gauss(1,i) = gauss_int(f, i);
-    I_Simpson(1,i) = simpson_int(f, a, b, i);
+    I_Gauss(1,i) = GaussInt(f, i);
+    I_Simpson(1,i) = SimpsonInt(f, a, b, i);
 end
    
-err_Gauss = abs(I - I_Gauss);
-err_Simpson = abs(I - I_Simpson);
+err_Gauss = abs((I - I_Gauss)/I);
+err_Simpson = abs((I - I_Simpson)/I);
 
 semilogy(1:n, [err_Gauss; err_Simpson], "-*");
 legend("Gauss", "Composite Simpson");
-title("Remainder of integration");
+title("relative integration error");
 xlabel("Order");

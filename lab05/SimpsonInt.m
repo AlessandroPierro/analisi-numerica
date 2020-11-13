@@ -1,4 +1,4 @@
-function [I] = simpson_int(f, a, b, n)
+function [I] = SimpsonInt(f, a, b, n)
     if rem(n, 2) == 0
         n = n+1;
     end

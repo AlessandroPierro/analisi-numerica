@@ -1,5 +1,5 @@
-n = 9;
-m = 100;
+n = 9;      % number of nodes
+m = 100;    % number of evaluation points
 
 f = @(x, y) 1 ./ (1 + 25 * ((x.^2) + (y.^2)));
 theta = @(t, n) cos((2*t - 1) * pi / (2*n)); 

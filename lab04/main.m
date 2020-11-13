@@ -17,8 +17,8 @@ X = zeros(n, m);
 Y = zeros(n, m);
 
 for i=1:n
-    X(i, :) = DeCasteljau(x(i, :), t);
-    Y(i, :) = DeCasteljau(y(i, :), t);
+    X(i, :) = BernsteinPol(x(i, :), t);
+    Y(i, :) = BernsteinPol(y(i, :), t);
 end
 
 % Plotting

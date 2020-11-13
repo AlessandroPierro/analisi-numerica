@@ -1,4 +1,4 @@
-function [T] = DeCasteljau(p, t)
+function [T] = BernsteinPol(p, t)
 
     n = length(p);
     m = length(t);
