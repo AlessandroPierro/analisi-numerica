@@ -17,5 +17,5 @@ I_simp = arrayfun(I_simpson, n);
 
 plot(1:20, (I - [I_rect; I_trap; I_simp])/I, "-*");
 legend("reactangular", "trapezoidal", "Simpson");
-title("relative ntegration error");
-xlabel("Number of nodes");
+title("relative integration error");
+xlabel("number of nodes");

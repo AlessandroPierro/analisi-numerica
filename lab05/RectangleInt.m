@@ -1,6 +1,5 @@
 function [I] = RectangleInt(f, a, b, n)
     x = linspace(a, b, n);
-    f_x = f(x);
-    I = sum(f_x) * (b-a) / n;
+    I = sum(f(x)) * (b-a) / (n-1);
 end
 
